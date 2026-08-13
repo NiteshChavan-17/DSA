@@ -82,7 +82,7 @@ int main() {
     ll.print();
 
     int n;
-    cout<<"\nEnter the node to delete from end:"<<endl;
+    cout<<"\nEnter the node to delete from end:";
     cin>>n;
 
     ll.DeleteNthNode(n);

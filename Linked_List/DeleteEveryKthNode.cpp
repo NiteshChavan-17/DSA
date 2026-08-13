@@ -50,7 +50,6 @@ class LL {
                     head = curr->next;
                     delete curr;
                     curr = head;
-                    cout<<"List is empty"<<endl;
                 }
                 else {
                     prev->next = curr->next;

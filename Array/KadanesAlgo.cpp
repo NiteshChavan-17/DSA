@@ -41,7 +41,7 @@ int main() {
 
     int maxArray = maxSubArraySum(arr, n);
 
-    cout<<"Max Subarray Sum:"<<maxArray<<endl;
+    cout<<"\nMax Subarray Sum:"<<maxArray<<endl;
 
     return 0;
 }

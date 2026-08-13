@@ -5,6 +5,10 @@ bool ValidAnagram(string s1, string s2) {
 
     int freq[26] = {0};
 
+    if(s1.length()!=s2.length()) {
+        return false;
+    }
+
     for(int i=0;i<s1.length();i++) {
         freq[s1[i]-'a']++;
     }

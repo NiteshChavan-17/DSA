@@ -27,6 +27,7 @@ class LL {
         Node*newNode = new Node(val);
         if(head==NULL) {
             head = tail = newNode;
+            return;
         }
         
         newNode->next = head;
@@ -38,6 +39,7 @@ class LL {
 
         if(head==NULL) {
             head = tail = newNode;
+            return;
         }
 
         tail->next = newNode;
@@ -75,6 +77,10 @@ class LL {
         head = head->next;
         temp->next = NULL;
         delete temp;
+
+        if(head==NULL) {
+            tail = NULL;
+        }
     }
 
     void Delete_End() {
@@ -83,13 +89,18 @@ class LL {
             return;
         }
 
+        if(head->next==NULL) {
+            delete head;
+            head = tail = NULL;
+            return;
+        }
         Node*temp = head;
-        while(temp->next!=tail) {
+        while(temp->next->next!=NULL) {
             temp = temp->next;
         }
 
+        delete temp->next;
         temp->next = NULL;
-        delete tail;
         tail = temp;
     }
 

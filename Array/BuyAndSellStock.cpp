@@ -41,7 +41,7 @@ int main() {
 
     int Buy_Sell = BuyandSellStock(arr, n);
 
-    cout<<"Max Profit:"<<Buy_Sell<<endl;
+    cout<<"\nMax Profit:"<<Buy_Sell<<endl;
 
     return 0;
 }

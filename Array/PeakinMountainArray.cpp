@@ -2,14 +2,14 @@
 using namespace std;
 
 int PeakinMountain(int arr[], int n) {
-    int s = 0;
-    int e = n-1;
+    int s = 1;
+    int e = n-2;
 
     while(s<=e) {
         int mid = s + (e-s)/2;
 
         if(arr[mid]>arr[mid-1] && arr[mid]>arr[mid+1]) {
-            return arr[mid];
+            return mid;
         }
         else if(arr[mid]<arr[mid+1]) {
             s = mid + 1;

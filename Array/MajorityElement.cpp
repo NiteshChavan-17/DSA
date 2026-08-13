@@ -18,7 +18,7 @@ int MajorityElement(vector<int>arr,int n) {
             ans = arr[i];
         }
 
-        if(freq>=n/2) {
+        if(freq>n/2) {
             return ans;
         }
     }

@@ -42,7 +42,7 @@ int main() {
     print(arr,n);
 
     DNF(arr,n);
-    cout<<"Sorted Array:"<<endl;
+    cout<<"\nSorted Array:"<<endl;
     print(arr,n);
 
     return 0;

@@ -59,4 +59,6 @@ int main() {
 
     int n = 4, m = 2;
     cout<<"Minimum No. of Pages:"<<AllocateBooks(arr,n,m)<<endl;
+
+    return 0;
 }

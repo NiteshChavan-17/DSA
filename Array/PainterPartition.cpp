@@ -61,4 +61,6 @@ int main() {
     int n = 4 , k = 2;
 
     cout<<"Minimum Possible time:"<<PaintBoard(arr,n,k)<<endl;
+
+    return 0;
 }

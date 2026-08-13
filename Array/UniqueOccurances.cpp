@@ -54,10 +54,10 @@ int main() {
 
     bool uniqueOccurance = UniqueOccurances(arr);
     if(uniqueOccurance) {
-        cout<<"Array contains unique occurance of element"<<endl;
+        cout<<"\nArray contains unique occurance of element"<<endl;
     }
     else{
-        cout<<"Array does not contains unique occurance of element"<<endl;
+        cout<<"\nArray does not contains unique occurance of element"<<endl;
     }
 
 
