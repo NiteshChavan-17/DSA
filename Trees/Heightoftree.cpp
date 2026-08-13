@@ -51,16 +51,12 @@ class Tree{
         Preorder(root->right);
     }
 
-    int SizeofTree(Node*root, int &count) {
+    int HeightofTree(Node*root) {
         if(root==NULL) {
             return 0;
         }
 
-        count++;
-        SizeofTree(root->left,count);
-        SizeofTree(root->right, count);
-
-        return count;
+        return 1 + max(HeightofTree(root->left), HeightofTree(root->right));
     }
 };
 
@@ -76,10 +72,9 @@ int main() {
 
     cout<<endl;
 
-    int count = 0;
-    int treeSize = t1.SizeofTree(root,count);
+    int Height = t1.HeightofTree(root);
 
-    cout<<"\nSize of tree:"<<treeSize<<endl;
+    cout<<"\nHeight of tree:"<<Height<<endl;
 
     return 0;
 }

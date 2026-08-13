@@ -51,16 +51,17 @@ class Tree{
         Preorder(root->right);
     }
 
-    int SizeofTree(Node*root, int &count) {
+    int CountNonLeaves(Node*root) {
+
         if(root==NULL) {
             return 0;
         }
+        
+        if(!root->left && !root->right) {
+            return 0;
+        }
 
-        count++;
-        SizeofTree(root->left,count);
-        SizeofTree(root->right, count);
-
-        return count;
+        return (1+ CountNonLeaves(root->left) + CountNonLeaves(root->right));
     }
 };
 
@@ -76,10 +77,9 @@ int main() {
 
     cout<<endl;
 
-    int count = 0;
-    int treeSize = t1.SizeofTree(root,count);
+    int NonLeafNode = t1.CountNonLeaves(root);
 
-    cout<<"\nSize of tree:"<<treeSize<<endl;
+    cout<<"\n Non Leaf Nodes in tree:"<<NonLeafNode<<endl;
 
     return 0;
 }

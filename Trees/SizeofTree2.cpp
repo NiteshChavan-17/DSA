@@ -56,7 +56,6 @@ class Tree{
             return 0;
         }
 
-        cout<<root->data<<" ";
         return (1 + SizeofTree(root->left) + SizeofTree(root->right));
     }
 };
